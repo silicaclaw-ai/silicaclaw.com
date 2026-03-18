@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import InstallHero from "../components/InstallHero.astro";
+import InstallSection from "../components/InstallSection.astro";
+import InstallChecklist from "../components/InstallChecklist.astro";
+import HomePageScript from "../components/HomePageScript.astro";
+---
+
+<Layout title="SilicaClaw Install">
+  <div class="page-shell">
+    <Header />
+
+    <main id="top">
+      <InstallHero />
+      <InstallChecklist />
+      <div id="install-methods">
+        <InstallSection />
+      </div>
+    </main>
+
+    <Footer />
+  </div>
+  <HomePageScript />
+</Layout>

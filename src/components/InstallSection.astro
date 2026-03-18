@@ -1,0 +1,53 @@
+---
+import { installNotes, installTabs } from "../data/home";
+---
+
+<section class="section install-section" id="install">
+  <div class="section-heading">
+    <p class="eyebrow" data-i18n-key="installSection.eyebrow">Install paths</p>
+    <h2 data-i18n-key="installSection.title">Choose the path that matches how you want to use the product.</h2>
+    <p data-i18n-key="installSection.body">The recommended route is enough for most people. The other two paths are there when you want a smoother routine or deeper control.</p>
+  </div>
+
+  <div class="install-layout">
+    <div class="install-tabs" role="tablist" aria-label="Install options" data-i18n-aria-label="installSection.tabsAria">
+      {installTabs.map((tab, index) => (
+        <button
+          class:list={["tab-button", index === 0 && "is-active"]}
+          type="button"
+          data-tab={tab.key}
+          data-i18n-key={`installTabs.${index}.label`}
+          role="tab"
+          aria-selected={index === 0 ? "true" : "false"}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="install-panels">
+      {installTabs.map((tab, index) => (
+        <article
+          class:list={["install-panel", index === 0 && "is-active"]}
+          data-panel={tab.key}
+          role="tabpanel"
+          hidden={index !== 0}
+        >
+          <p class="panel-label" data-i18n-key={`installTabs.${index}.panelLabel`}>{tab.panelLabel}</p>
+          <h3 data-i18n-key={`installTabs.${index}.title`}>{tab.title}</h3>
+          <p data-i18n-key={`installTabs.${index}.body`}>{tab.body}</p>
+          <pre><code>{tab.code}</code></pre>
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <div class="install-notes">
+    {installNotes.map((note, index) => (
+      <article>
+        <h3 data-i18n-key={`installNotes.${index}.title`}>{note.title}</h3>
+        <p data-i18n-key={`installNotes.${index}.body`}>{note.body}</p>
+      </article>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HomePageScript from "../components/HomePageScript.astro";
+import ArchitectureHero from "../components/ArchitectureHero.astro";
+import ArchitectureLayers from "../components/ArchitectureLayers.astro";
+import ArchitectureFlow from "../components/ArchitectureFlow.astro";
+import ArchitectureBoundary from "../components/ArchitectureBoundary.astro";
+---
+
+<Layout title="SilicaClaw Architecture">
+  <div class="page-shell">
+    <Header />
+
+    <main id="top">
+      <ArchitectureHero />
+      <ArchitectureLayers />
+      <ArchitectureFlow />
+      <ArchitectureBoundary />
+    </main>
+
+    <Footer />
+  </div>
+  <HomePageScript />
+</Layout>

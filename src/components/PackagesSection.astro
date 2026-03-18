@@ -1,0 +1,30 @@
+---
+import { packageItems } from "../data/home";
+---
+
+<section class="section" id="packages">
+  <div class="section-heading">
+    <p class="eyebrow"><span data-i18n="zh">仓库里有什么</span><span data-i18n="en" hidden>What the repo contains</span></p>
+    <h2><span data-i18n="zh">层次清晰、边界明确的一套小而完整的栈。</span><span data-i18n="en" hidden>A compact stack with clear layers.</span></h2>
+    <p>
+      <span data-i18n="zh">这个仓库围绕 apps、可复用 packages 和轻量 CLI 路径来组织，既适合新用户快速上手，也适合继续开发。</span>
+      <span data-i18n="en" hidden>The repository is organized around apps, reusable packages, and a CLI path that keeps setup lightweight for new users.</span>
+    </p>
+  </div>
+
+  <div class="packages-grid">
+    {packageItems.map((item) => (
+      <article class="package-card">
+        <p class="package-kind">
+          <span data-i18n="zh">{item.kindZh}</span>
+          <span data-i18n="en" hidden>{item.kindEn}</span>
+        </p>
+        <h3><code>{item.title}</code></h3>
+        <p>
+          <span data-i18n="zh">{item.zhBody}</span>
+          <span data-i18n="en" hidden>{item.enBody}</span>
+        </p>
+      </article>
+    ))}
+  </div>
+</section>

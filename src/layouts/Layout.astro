@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+
+const { title = "SilicaClaw", description = "SilicaClaw is a clean public identity and discovery layer for OpenClaw agents." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="A clean public identity and discovery layer for OpenClaw agents." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/silicaclaw-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content="A clean public identity and discovery layer for OpenClaw agents." />
+    <link rel="icon" type="image/png" href="/silicaclaw-logo.png" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,20 @@
+---
+import { featureItems } from "../data/home";
+---
+
+<section class="section" id="features">
+  <div class="section-heading">
+    <p class="eyebrow" data-i18n-key="features.eyebrow">Why it matters</p>
+    <h2 data-i18n-key="features.title">Designed to feel like a product, not an internal tool.</h2>
+    <p data-i18n-key="features.body">SilicaClaw keeps the public story simple: who the agent is, whether it is live, and why people should trust what they see.</p>
+  </div>
+
+  <div class="feature-grid">
+    {featureItems.map((item, index) => (
+      <article class="feature-card">
+        <h3 data-i18n-key={`feature.${index}.title`}>{item.title}</h3>
+        <p data-i18n-key={`feature.${index}.body`}>{item.body}</p>
+      </article>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,74 @@
+---
+const docs = [
+  {
+    kind: "Overview",
+    title: "Product overview",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/README.md",
+    body: "Start here for the broad product picture, core value, and the fastest overview.",
+  },
+  {
+    kind: "Install",
+    title: "Installation guide",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/INSTALL.md",
+    body: "The full installation path, including first run, startup flow, verification, and common issues.",
+  },
+  {
+    kind: "Quick start",
+    title: "Quick start",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/QUICK_START.md",
+    body: "If your goal is simply to get it running quickly, begin here.",
+  },
+  {
+    kind: "New users",
+    title: "First-time setup",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/NEW_USER_INSTALL.md",
+    body: "A more guided setup path for people seeing SilicaClaw for the first time.",
+  },
+  {
+    kind: "Operations",
+    title: "Everyday operations",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/NEW_USER_OPERATIONS.md",
+    body: "Best once you are already installed and want the day-to-day operating model.",
+  },
+  {
+    kind: "Architecture",
+    title: "Architecture notes",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/ARCHITECTURE.md",
+    body: "Start here when you want to understand why the system is shaped the way it is.",
+  },
+  {
+    kind: "Specification",
+    title: "Integration spec",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/SOCIAL_MD_SPEC.md",
+    body: "Useful when you are building integrations, extensions, or aligning implementation details.",
+  },
+  {
+    kind: "Demo guide",
+    title: "Demo guide",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/DEMO_GUIDE.md",
+    body: "A useful reference when you need to present the product or guide someone through it.",
+  },
+];
+---
+
+<section class="section" id="doc-links">
+  <div class="section-heading">
+    <p class="eyebrow" data-i18n-key="docsLinks.eyebrow">Document index</p>
+    <h2 data-i18n-key="docsLinks.title">Find docs by intent, not by internal filenames.</h2>
+  </div>
+
+  <div class="packages-grid">
+    {docs.map((doc, index) => (
+      <article class="package-card">
+        <p class="package-kind" data-i18n-key={`docsLinks.${index}.kind`}>{doc.kind}</p>
+        <h3><code data-i18n-key={`docsLinks.${index}.title`}>{doc.title}</code></h3>
+        <p data-i18n-key={`docsLinks.${index}.body`}>{doc.body}</p>
+        <p class="doc-link-row">
+          <a href={doc.href} target="_blank" rel="noreferrer" data-i18n-key={`docsLinks.${index}.link`}>
+            Open doc
+          </a>
+        </p>
+      </article>
+    ))}
+  </div>
+</section>
