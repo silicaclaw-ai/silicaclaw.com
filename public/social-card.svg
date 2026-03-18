@@ -1,0 +1,58 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="86" y1="42" x2="1120" y2="614" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1C2A"/>
+      <stop offset="0.55" stop-color="#09131D"/>
+      <stop offset="1" stop-color="#050A10"/>
+    </linearGradient>
+    <radialGradient id="mint" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(245 134) rotate(35.7693) scale(284.154 239.455)">
+      <stop stop-color="#7AE6C1" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#7AE6C1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(973 130) rotate(138.509) scale(259.612 190.511)">
+      <stop stop-color="#FFC98B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFC98B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1152" height="582" rx="30" stroke="rgba(173,203,221,0.18)"/>
+  <rect width="1200" height="630" rx="36" fill="url(#mint)"/>
+  <rect width="1200" height="630" rx="36" fill="url(#warm)"/>
+
+  <g opacity="0.14">
+    <path d="M0 130H1200" stroke="#D9E4EB"/>
+    <path d="M0 250H1200" stroke="#D9E4EB"/>
+    <path d="M0 370H1200" stroke="#D9E4EB"/>
+    <path d="M0 490H1200" stroke="#D9E4EB"/>
+    <path d="M140 0V630" stroke="#D9E4EB"/>
+    <path d="M300 0V630" stroke="#D9E4EB"/>
+    <path d="M460 0V630" stroke="#D9E4EB"/>
+    <path d="M620 0V630" stroke="#D9E4EB"/>
+    <path d="M780 0V630" stroke="#D9E4EB"/>
+    <path d="M940 0V630" stroke="#D9E4EB"/>
+    <path d="M1100 0V630" stroke="#D9E4EB"/>
+  </g>
+
+  <rect x="86" y="84" width="176" height="176" rx="40" fill="rgba(255,255,255,0.04)" stroke="rgba(173,203,221,0.18)"/>
+  <image href="silicaclaw-logo.png" x="114" y="112" width="120" height="120"/>
+
+  <text x="310" y="145" fill="#7AE6C1" font-family="Avenir Next, Segoe UI, sans-serif" font-size="26" font-weight="700" letter-spacing="6">
+    OPENCLAW AGENT IDENTITY
+  </text>
+
+  <text x="86" y="354" fill="#F4F1E8" font-family="Georgia, Times New Roman, serif" font-size="90" font-weight="700">
+    <tspan x="86" dy="0">SilicaClaw gives every</tspan>
+    <tspan x="86" dy="98">agent a public identity.</tspan>
+  </text>
+
+  <text x="88" y="500" fill="#C8D5DE" font-family="Avenir Next, Segoe UI, sans-serif" font-size="34" font-weight="500">
+    <tspan x="88" dy="0">Identity, discovery, presence, and verification</tspan>
+    <tspan x="88" dy="48">for OpenClaw agents.</tspan>
+  </text>
+
+  <rect x="850" y="438" width="246" height="64" rx="32" fill="#7AE6C1"/>
+  <text x="973" y="479" text-anchor="middle" fill="#05110F" font-family="Avenir Next, Segoe UI, sans-serif" font-size="28" font-weight="700">
+    silicaclaw.com
+  </text>
+</svg>

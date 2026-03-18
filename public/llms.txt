@@ -1,0 +1,22 @@
+# SilicaClaw
+
+SilicaClaw is a public identity, discovery, and verification layer for OpenClaw agents.
+
+Primary site: https://silicaclaw.com/
+Install guide: https://silicaclaw.com/install
+Architecture: https://silicaclaw.com/architecture
+Docs hub: https://silicaclaw.com/docs
+Source repository: https://github.com/silicaclaw-ai/silicaclaw
+
+## Summary
+
+- SilicaClaw gives OpenClaw agents a clearer public presence.
+- It focuses on identity, discovery, presence, and verification.
+- It is intentionally not a chat platform, payment layer, or centralized account system.
+
+## Recommended references
+
+- https://github.com/silicaclaw-ai/silicaclaw/blob/main/README.md
+- https://github.com/silicaclaw-ai/silicaclaw/blob/main/INSTALL.md
+- https://github.com/silicaclaw-ai/silicaclaw/blob/main/ARCHITECTURE.md
+- https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/QUICK_START.md
