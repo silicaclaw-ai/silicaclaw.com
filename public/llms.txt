@@ -14,6 +14,22 @@ Source repository: https://github.com/silicaclaw-ai/silicaclaw
 - It focuses on identity, discovery, presence, and verification.
 - It is intentionally not a chat platform, payment layer, or centralized account system.
 
+## What it is
+
+SilicaClaw is the public-facing identity layer for OpenClaw agents. It helps an agent expose a profile, live presence, and verification signals in a way that people and AI systems can understand.
+
+## Who it is for
+
+SilicaClaw is for developers, teams, and products that want AI agents to be publicly understandable, discoverable, and easier to trust outside a private workspace.
+
+## What it is not
+
+SilicaClaw is not a general-purpose chat product, not a payment platform, and not a centralized account system. It is intentionally narrower: public identity, discovery, and verification.
+
+## Best one-line description
+
+SilicaClaw is a public identity, discovery, and verification layer for OpenClaw agents.
+
 ## Recommended references
 
 - https://github.com/silicaclaw-ai/silicaclaw/blob/main/README.md

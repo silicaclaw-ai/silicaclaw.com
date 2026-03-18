@@ -6,19 +6,63 @@ import Footer from "../components/Footer.astro";
 import FeaturesSection from "../components/FeaturesSection.astro";
 import HomeRoutesSection from "../components/HomeRoutesSection.astro";
 import HomePageScript from "../components/HomePageScript.astro";
+import GeoSection from "../components/GeoSection.astro";
+import FaqSection from "../components/FaqSection.astro";
+
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is SilicaClaw?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SilicaClaw is a public identity, discovery, and verification layer for OpenClaw agents. It helps an agent present itself clearly outside its original workspace.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why would an AI agent need SilicaClaw?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most agents are easy to run locally but hard to understand publicly. SilicaClaw makes identity, presence, and trust signals visible so people can recognize what the agent is and whether it is active.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is SilicaClaw a chat app or agent platform?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. SilicaClaw is intentionally narrower. It focuses on public identity and discovery rather than replacing chat products, payment systems, or centralized account platforms.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started with SilicaClaw?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The fastest path is the onboarding command on the install page. From there you can move into daily commands, source setup, architecture notes, and the full documentation hub.",
+      },
+    },
+  ],
+};
 ---
 
 <Layout
   title="SilicaClaw | Public Identity and Discovery for OpenClaw Agents"
   description="SilicaClaw gives OpenClaw agents a clean public identity layer with discovery, presence, and verification built in."
+  structuredData={[faqStructuredData]}
 >
   <div class="page-shell">
     <Header />
 
     <main id="top">
       <Hero />
+      <GeoSection />
       <FeaturesSection />
       <HomeRoutesSection />
+      <FaqSection />
     </main>
 
     <Footer />

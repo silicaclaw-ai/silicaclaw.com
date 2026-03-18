@@ -4,6 +4,7 @@ import "../styles/global.css";
 const {
   title = "SilicaClaw | Public Identity and Discovery for OpenClaw Agents",
   description = "SilicaClaw is a clean public identity, discovery, and verification layer for OpenClaw agents.",
+  structuredData: pageStructuredData = [],
 } = Astro.props;
 
 const siteUrl = Astro.site ?? new URL("https://silicaclaw.com");
@@ -37,6 +38,7 @@ const structuredData = [
     image: socialImageUrl,
     description,
   },
+  ...pageStructuredData,
 ];
 ---
 

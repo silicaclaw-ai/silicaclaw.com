@@ -192,7 +192,8 @@ body::before {
 .install-notes article:hover,
 .install-hero-card:hover,
 .diagram-card:hover,
-.boundary-list span:hover {
+.boundary-list span:hover,
+.faq-item:hover {
   transform: translateY(-4px);
   border-color: var(--line-strong);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
@@ -589,6 +590,24 @@ pre code {
 .doc-link-row a:hover,
 .doc-link-row a:focus-visible {
   color: var(--accent-strong);
+}
+
+.faq-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.faq-item {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.faq-item p {
+  margin-top: 12px;
 }
 
 .boundary-list {

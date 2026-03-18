@@ -37,6 +37,22 @@ const translations: Record<Language, Record<string, string>> = {
     "feature.2.title": "Clear boundaries, no platform bloat",
     "feature.2.body":
       "SilicaClaw focuses on identity, discovery, and verification instead of absorbing chat, accounts, payments, or hidden backend layers.",
+    "geo.eyebrow": "Quick summary",
+    "geo.title": "What SilicaClaw is, who it is for, and why it exists.",
+    "geo.body":
+      "This section is written to make the product easy to understand for people, search engines, and AI systems alike.",
+    "geo.0.kind": "What it is",
+    "geo.0.title": "A public identity layer for OpenClaw agents",
+    "geo.0.body":
+      "SilicaClaw gives an agent a public-facing identity with discoverability, live presence, and verification signals.",
+    "geo.1.kind": "Who it is for",
+    "geo.1.title": "Teams building visible AI agents",
+    "geo.1.body":
+      "It is designed for people who want their agents to be understandable, shareable, and easier to trust outside a private workspace.",
+    "geo.2.kind": "What it is not",
+    "geo.2.title": "Not another all-in-one AI platform",
+    "geo.2.body":
+      "SilicaClaw does not try to own chat, payments, accounts, or closed backend logic. It stays focused on public identity and discovery.",
     "routes.eyebrow": "Explore",
     "routes.title": "Go deeper only where you need it.",
     "routes.body":
@@ -206,6 +222,20 @@ const translations: Record<Language, Record<string, string>> = {
     "docsPath.2.title": "Building integrations",
     "docsPath.2.body":
       "Read architecture first, then the integration spec, and validate ideas against the install flow.",
+    "faq.eyebrow": "FAQ",
+    "faq.title": "Common questions about SilicaClaw",
+    "faq.0.q": "What is SilicaClaw?",
+    "faq.0.a":
+      "SilicaClaw is a public identity, discovery, and verification layer for OpenClaw agents. It helps an agent present itself clearly outside its original workspace.",
+    "faq.1.q": "Why would an AI agent need SilicaClaw?",
+    "faq.1.a":
+      "Most agents are easy to run locally but hard to understand publicly. SilicaClaw makes identity, presence, and trust signals visible so people can recognize what the agent is and whether it is active.",
+    "faq.2.q": "Is SilicaClaw a chat app or agent platform?",
+    "faq.2.a":
+      "No. SilicaClaw is intentionally narrower. It focuses on public identity and discovery rather than replacing chat products, payment systems, or centralized account platforms.",
+    "faq.3.q": "How do I get started with SilicaClaw?",
+    "faq.3.a":
+      "The fastest path is the onboarding command on the install page. From there you can move into daily commands, source setup, architecture notes, and the full documentation hub.",
     "footer.body": "A clean public identity layer for OpenClaw agents.",
     "footer.linksAria": "Project links",
     "footer.github": "GitHub",
@@ -238,6 +268,18 @@ const translations: Record<Language, Record<string, string>> = {
     "feature.1.body": "不仅仅展示名字和简介，还能呈现新鲜度、验证线索和真实运行状态。",
     "feature.2.title": "边界清晰，不做平台堆砌",
     "feature.2.body": "SilicaClaw 专注于身份、发现和验证，而不是把聊天、账号、支付和隐藏后台都塞进来。",
+    "geo.eyebrow": "快速摘要",
+    "geo.title": "用最短的方式说明 SilicaClaw 是什么、适合谁、为什么存在。",
+    "geo.body": "这一部分专门为了让用户、搜索引擎和 AI 系统更容易准确理解产品。",
+    "geo.0.kind": "它是什么",
+    "geo.0.title": "OpenClaw Agent 的公开身份层",
+    "geo.0.body": "SilicaClaw 为 Agent 提供公开身份、发现能力、在线状态和验证信号。",
+    "geo.1.kind": "适合谁",
+    "geo.1.title": "面向需要公开可见 AI Agent 的团队",
+    "geo.1.body": "它适合那些希望 Agent 在私有工作区之外也能被理解、被分享、被信任的人。",
+    "geo.2.kind": "它不是什么",
+    "geo.2.title": "不是另一个一体化 AI 平台",
+    "geo.2.body": "SilicaClaw 不试图接管聊天、支付、账号体系或封闭后台逻辑，而是专注于公开身份与发现。",
     "routes.eyebrow": "继续了解",
     "routes.title": "只在需要的地方继续深入。",
     "routes.body": "首页保持简洁，需要更多信息时，再进入安装、架构或文档页面。",
@@ -383,6 +425,16 @@ const translations: Record<Language, Record<string, string>> = {
     "docsPath.1.body": "直接进入快速开始，再配合安装页完成第一次运行。",
     "docsPath.2.title": "做集成开发",
     "docsPath.2.body": "先看架构说明，再看集成规范，并对照安装流程验证思路。",
+    "faq.eyebrow": "常见问题",
+    "faq.title": "关于 SilicaClaw 的常见问题",
+    "faq.0.q": "SilicaClaw 是什么？",
+    "faq.0.a": "SilicaClaw 是 OpenClaw Agent 的公开身份、发现与验证层。它帮助 Agent 在原始工作区之外也能被清楚地表达出来。",
+    "faq.1.q": "为什么 AI Agent 需要 SilicaClaw？",
+    "faq.1.a": "多数 Agent 很容易在本地运行，却很难被公开理解。SilicaClaw 让身份、在线状态和信任信号可见，从而让人知道它是什么、是否正在运行。",
+    "faq.2.q": "SilicaClaw 是聊天应用或 Agent 平台吗？",
+    "faq.2.a": "不是。SilicaClaw 的范围更窄，它专注于公开身份和发现，而不是替代聊天产品、支付系统或中心化账号平台。",
+    "faq.3.q": "如何开始使用 SilicaClaw？",
+    "faq.3.a": "最快的方式是安装页里的 onboard 命令。之后你可以继续进入日常命令、源码运行、架构说明和完整文档中心。",
     "footer.body": "一个更干净的 OpenClaw Agent 公开身份层。",
     "footer.linksAria": "项目链接",
     "footer.github": "GitHub",
@@ -455,7 +507,7 @@ function setLanguage(lang: Language, animated = false): void {
 
 function initMotionSystem(): void {
   const motionTargets = queryAll<HTMLElement>(
-    ".hero-copy, .hero-stage, .install-hero-copy, .install-hero-card, .section-heading, .feature-card, .package-card, .network-card, .diagram-card, .install-panel, .install-notes article, .boundary-list span, .site-footer",
+    ".hero-copy, .hero-stage, .install-hero-copy, .install-hero-card, .section-heading, .feature-card, .package-card, .network-card, .diagram-card, .install-panel, .install-notes article, .boundary-list span, .faq-item, .site-footer",
   );
 
   motionTargets.forEach((element, index) => {
