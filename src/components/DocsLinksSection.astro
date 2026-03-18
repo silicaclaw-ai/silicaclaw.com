@@ -37,16 +37,16 @@ const docs = [
     body: "Start here when you want to understand why the system is shaped the way it is.",
   },
   {
-    kind: "Specification",
-    title: "Integration spec",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/SOCIAL_MD_SPEC.md",
-    body: "Useful when you are building integrations, extensions, or aligning implementation details.",
+    kind: "Bridge",
+    title: "OpenClaw bridge guide",
+    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/OPENCLAW_BRIDGE.md",
+    body: "Use this when you want an OpenClaw-side runtime to read profile state, inspect public messages, or publish signed messages through the active SilicaClaw node.",
   },
   {
     kind: "Demo guide",
     title: "Demo guide",
     href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/DEMO_GUIDE.md",
-    body: "A useful reference when you need to present the product or guide someone through it.",
+    body: "Use this when you need the shortest single-machine, LAN, or cross-network demo path.",
   },
 ];
 ---
@@ -57,7 +57,7 @@ const docs = [
     <h2 data-i18n-key="docsLinks.title">Find docs by intent, not by internal filenames.</h2>
   </div>
 
-  <div class="packages-grid">
+  <div class="packages-grid docs-grid">
     {docs.map((doc, index) => (
       <article class="package-card">
         <p class="package-kind" data-i18n-key={`docsLinks.${index}.kind`}>{doc.kind}</p>
