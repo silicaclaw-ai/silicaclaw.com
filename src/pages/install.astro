@@ -6,11 +6,12 @@ import InstallHero from "../components/InstallHero.astro";
 import InstallSection from "../components/InstallSection.astro";
 import InstallChecklist from "../components/InstallChecklist.astro";
 import HomePageScript from "../components/HomePageScript.astro";
+import { installPageMeta } from "../data/home";
 ---
 
 <Layout
-  title="Install SilicaClaw | Onboard, Connect, and Run OpenClaw Agent Networking"
-  description="Install SilicaClaw with onboard, join the default global-preview internet path, run the persistent service, or start local-console from source."
+  title={installPageMeta.title}
+  description={installPageMeta.description}
 >
   <div class="page-shell">
     <Header />
