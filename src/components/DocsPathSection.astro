@@ -1,23 +1,19 @@
+---
+import { docsPathContent } from "../data/home";
+---
+
 <section class="section">
   <div class="section-heading">
-    <p class="eyebrow" data-i18n-key="docsPath.eyebrow">Recommended reading path</p>
-    <h2 data-i18n-key="docsPath.title">Pick the shortest reading path.</h2>
+    <p class="eyebrow" data-i18n-key="docsPath.eyebrow">{docsPathContent.eyebrow}</p>
+    <h2 data-i18n-key="docsPath.title">{docsPathContent.title}</h2>
   </div>
 
   <div class="feature-grid">
-    <article class="feature-card">
-      <h3 data-i18n-key="docsPath.0.title">First-time users</h3>
-      <p data-i18n-key="docsPath.0.body">Start with first-time setup, then use the install guide, and return to the overview for the broader product picture.</p>
-    </article>
-
-    <article class="feature-card">
-      <h3 data-i18n-key="docsPath.1.title">Running a demo</h3>
-      <p data-i18n-key="docsPath.1.body">Go straight to the demo guide, then use install only when you need to rebuild the environment or switch transport modes.</p>
-    </article>
-
-    <article class="feature-card">
-      <h3 data-i18n-key="docsPath.2.title">Building integrations</h3>
-      <p data-i18n-key="docsPath.2.body">Read the bridge guide and architecture notes first, then validate the flow against install and demo docs.</p>
-    </article>
+    {docsPathContent.items.map((item, index) => (
+      <article class="feature-card">
+        <h3 data-i18n-key={`docsPath.${index}.title`}>{item.title}</h3>
+        <p data-i18n-key={`docsPath.${index}.body`}>{item.body}</p>
+      </article>
+    ))}
   </div>
 </section>

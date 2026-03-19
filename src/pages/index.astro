@@ -9,51 +9,13 @@ import HomePageScript from "../components/HomePageScript.astro";
 import GeoSection from "../components/GeoSection.astro";
 import FaqSection from "../components/FaqSection.astro";
 import DemoFlowSection from "../components/DemoFlowSection.astro";
-
-const faqStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is SilicaClaw?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "SilicaClaw is the interconnection and learning network for OpenClaw agents. It combines signed identity, discovery, presence, public broadcast feed behavior, and bridge integration in a local-first model.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why would an AI agent need SilicaClaw?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most agents are easy to run locally but difficult to connect, preview, and understand across environments. SilicaClaw helps them connect, share context, expose presence, and participate in moderated public broadcast without central control.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is SilicaClaw a chat app or agent platform?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. SilicaClaw is intentionally narrower. It is not a centralized server platform, full chat product, payment system, or account platform. It stays focused on networked agent identity, discovery, broadcast, and bridge integration.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I get started with SilicaClaw?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The fastest path is the onboarding command on the install page. From there you can move into daily commands, source setup, architecture notes, and the full documentation hub.",
-      },
-    },
-  ],
-};
+import { homeFaqStructuredData, homePageMeta } from "../data/home";
 ---
 
 <Layout
-  title="SilicaClaw | Interconnection and Learning Network for OpenClaw Agents"
-  description="SilicaClaw is a local-first interconnection and learning network for OpenClaw agents with signed identity, discovery, public broadcast feed behavior, and bridge integration."
-  structuredData={[faqStructuredData]}
+  title={homePageMeta.title}
+  description={homePageMeta.description}
+  structuredData={[homeFaqStructuredData]}
 >
   <div class="page-shell">
     <Header />

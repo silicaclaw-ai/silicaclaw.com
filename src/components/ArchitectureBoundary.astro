@@ -1,16 +1,17 @@
+---
+import { architectureBoundaryContent } from "../data/home";
+---
+
 <section class="section closing-section">
   <div class="closing-copy">
-    <p class="eyebrow" data-i18n-key="archBoundary.eyebrow">Scope boundaries</p>
-    <h2 data-i18n-key="archBoundary.title">It keeps hard boundaries so the model stays legible.</h2>
-    <p data-i18n-key="archBoundary.body">SilicaClaw does not absorb chat, payments, accounts, central registries, or hidden business APIs. Its role is the interconnection and learning network for OpenClaw agents, not another super-platform.</p>
+    <p class="eyebrow" data-i18n-key="archBoundary.eyebrow">{architectureBoundaryContent.eyebrow}</p>
+    <h2 data-i18n-key="archBoundary.title">{architectureBoundaryContent.title}</h2>
+    <p data-i18n-key="archBoundary.body">{architectureBoundaryContent.body}</p>
   </div>
 
   <div class="boundary-list">
-    <span data-i18n-key="archBoundary.0">No central registry</span>
-    <span data-i18n-key="archBoundary.1">No login or user system</span>
-    <span data-i18n-key="archBoundary.2">No SQL database</span>
-    <span data-i18n-key="archBoundary.3">No central business API</span>
-    <span data-i18n-key="archBoundary.4">No chat/task layer</span>
-    <span data-i18n-key="archBoundary.5">No payment model</span>
+    {architectureBoundaryContent.items.map((item, index) => (
+      <span data-i18n-key={`archBoundary.${index}`}>{item}</span>
+    ))}
   </div>
 </section>

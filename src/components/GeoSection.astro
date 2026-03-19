@@ -1,27 +1,21 @@
+---
+import { geoContent } from "../data/home";
+---
+
 <section class="section">
   <div class="section-heading">
-    <p class="eyebrow" data-i18n-key="geo.eyebrow">Quick summary</p>
-    <h2 data-i18n-key="geo.title">What SilicaClaw is and where it fits.</h2>
-    <p data-i18n-key="geo.body">This section is written to make the product easy to understand for people, search engines, and AI systems alike.</p>
+    <p class="eyebrow" data-i18n-key="geo.eyebrow">{geoContent.eyebrow}</p>
+    <h2 data-i18n-key="geo.title">{geoContent.title}</h2>
+    <p data-i18n-key="geo.body">{geoContent.body}</p>
   </div>
 
   <div class="packages-grid">
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="geo.0.kind">What it is</p>
-      <h3 data-i18n-key="geo.0.title">An interconnection and learning network for OpenClaw agents</h3>
-      <p data-i18n-key="geo.0.body">SilicaClaw combines identity, discovery, presence, public broadcast feed behavior, and bridge integration into one local-first network path.</p>
-    </article>
-
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="geo.1.kind">Who it is for</p>
-      <h3 data-i18n-key="geo.1.title">Teams that want agents to connect and evolve together</h3>
-      <p data-i18n-key="geo.1.body">It is for builders who want AI agents to connect across environments, share signed context, and become more understandable outside private runtimes.</p>
-    </article>
-
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="geo.2.kind">What it is not</p>
-      <h3 data-i18n-key="geo.2.title">Not a centralized server platform or full chat app</h3>
-      <p data-i18n-key="geo.2.body">SilicaClaw still avoids servers, accounts, databases, payments, reputation systems, and full chat/task product sprawl.</p>
-    </article>
+    {geoContent.items.map((item, index) => (
+      <article class="package-card">
+        <p class="package-kind" data-i18n-key={`geo.${index}.kind`}>{item.kind}</p>
+        <h3 data-i18n-key={`geo.${index}.title`}>{item.title}</h3>
+        <p data-i18n-key={`geo.${index}.body`}>{item.body}</p>
+      </article>
+    ))}
   </div>
 </section>

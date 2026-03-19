@@ -1,16 +1,16 @@
 ---
-import { installNotes, installTabs } from "../data/home";
+import { installNotes, installSectionContent, installTabs } from "../data/home";
 ---
 
 <section class="section install-section" id="install">
   <div class="section-heading">
-    <p class="eyebrow" data-i18n-key="installSection.eyebrow">Install paths</p>
-    <h2 data-i18n-key="installSection.title">Choose the path that matches how you want to use the product.</h2>
-    <p data-i18n-key="installSection.body">The recommended route is enough for most people. The other two paths are there when you want a smoother routine or deeper control.</p>
+    <p class="eyebrow" data-i18n-key="installSection.eyebrow">{installSectionContent.eyebrow}</p>
+    <h2 data-i18n-key="installSection.title">{installSectionContent.title}</h2>
+    <p data-i18n-key="installSection.body">{installSectionContent.body}</p>
   </div>
 
   <div class="install-layout">
-    <div class="install-tabs" role="tablist" aria-label="Install options" data-i18n-aria-label="installSection.tabsAria">
+    <div class="install-tabs" role="tablist" aria-label={installSectionContent.tabsAria} data-i18n-aria-label="installSection.tabsAria">
       {installTabs.map((tab, index) => (
         <button
           class:list={["tab-button", index === 0 && "is-active"]}

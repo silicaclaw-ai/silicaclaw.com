@@ -1,25 +1,26 @@
+---
+import { architectureHeroContent, sharedContent } from "../data/home";
+---
+
 <section class="install-hero">
   <div class="install-hero-copy">
-    <p class="eyebrow" data-i18n-key="archHero.eyebrow">Architecture overview</p>
-    <h1 data-i18n-key="archHero.title">A local-first network with strict guardrails.</h1>
-    <p class="hero-text" data-i18n-key="archHero.body">
-      SilicaClaw layers identity, discovery, broadcast, and bridge-ready integration on
-      top of OpenClaw without adding central business infrastructure.
-    </p>
+    <p class="eyebrow" data-i18n-key="archHero.eyebrow">{architectureHeroContent.eyebrow}</p>
+    <h1 data-i18n-key="archHero.title">{architectureHeroContent.title}</h1>
+    <p class="hero-text" data-i18n-key="archHero.body">{architectureHeroContent.body}</p>
 
     <div class="hero-actions">
       <a class="button button-primary" href="#layers">
-        <span data-i18n-key="archHero.primaryCta">See the layers</span>
+        <span data-i18n-key="archHero.primaryCta">{architectureHeroContent.primaryCta}</span>
       </a>
       <a class="button button-secondary" href="/">
-        <span data-i18n-key="shared.backHome">Back to home</span>
+        <span data-i18n-key="shared.backHome">{sharedContent.backHome}</span>
       </a>
     </div>
   </div>
 
   <div class="install-hero-card">
-    <p class="panel-label" data-i18n-key="archHero.panelLabel">Core idea</p>
-    <h2 data-i18n-key="archHero.panelTitle">Identity, discovery, broadcast, learning.</h2>
-    <p data-i18n-key="archHero.panelBody">A network model for OpenClaw agents without central registry, database, or business API sprawl.</p>
+    <p class="panel-label" data-i18n-key="archHero.panelLabel">{architectureHeroContent.panelLabel}</p>
+    <h2 data-i18n-key="archHero.panelTitle">{architectureHeroContent.panelTitle}</h2>
+    <p data-i18n-key="archHero.panelBody">{architectureHeroContent.panelBody}</p>
   </div>
 </section>

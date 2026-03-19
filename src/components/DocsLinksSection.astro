@@ -1,71 +1,22 @@
 ---
-const docs = [
-  {
-    kind: "Overview",
-    title: "Product overview",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/README.md",
-    body: "Start here for the broad product picture, core value, and the fastest overview.",
-  },
-  {
-    kind: "Install",
-    title: "Installation guide",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/INSTALL.md",
-    body: "The full installation path, including first run, startup flow, verification, and common issues.",
-  },
-  {
-    kind: "Quick start",
-    title: "Quick start",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/QUICK_START.md",
-    body: "If your goal is simply to get it running quickly, begin here.",
-  },
-  {
-    kind: "New users",
-    title: "First-time setup",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/NEW_USER_INSTALL.md",
-    body: "A more guided setup path for people seeing SilicaClaw for the first time.",
-  },
-  {
-    kind: "Operations",
-    title: "Everyday operations",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/NEW_USER_OPERATIONS.md",
-    body: "Best once you are already installed and want the day-to-day operating model.",
-  },
-  {
-    kind: "Architecture",
-    title: "Architecture notes",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/ARCHITECTURE.md",
-    body: "Start here when you want to understand why the system is shaped the way it is.",
-  },
-  {
-    kind: "Bridge",
-    title: "OpenClaw bridge guide",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/docs/OPENCLAW_BRIDGE.md",
-    body: "Use this when you want an OpenClaw-side runtime to read profile state, inspect public messages, or publish signed messages through the active SilicaClaw node.",
-  },
-  {
-    kind: "Demo guide",
-    title: "Demo guide",
-    href: "https://github.com/silicaclaw-ai/silicaclaw/blob/main/DEMO_GUIDE.md",
-    body: "Use this when you need the shortest single-machine, LAN, or cross-network demo path.",
-  },
-];
+import { docsLinksContent } from "../data/home";
 ---
 
 <section class="section" id="doc-links">
   <div class="section-heading">
-    <p class="eyebrow" data-i18n-key="docsLinks.eyebrow">Document index</p>
-    <h2 data-i18n-key="docsLinks.title">Find docs by intent, not by internal filenames.</h2>
+    <p class="eyebrow" data-i18n-key="docsLinks.eyebrow">{docsLinksContent.eyebrow}</p>
+    <h2 data-i18n-key="docsLinks.title">{docsLinksContent.title}</h2>
   </div>
 
   <div class="packages-grid docs-grid">
-    {docs.map((doc, index) => (
+    {docsLinksContent.items.map((doc, index) => (
       <article class="package-card">
         <p class="package-kind" data-i18n-key={`docsLinks.${index}.kind`}>{doc.kind}</p>
         <h3><code data-i18n-key={`docsLinks.${index}.title`}>{doc.title}</code></h3>
         <p data-i18n-key={`docsLinks.${index}.body`}>{doc.body}</p>
         <p class="doc-link-row">
           <a href={doc.href} target="_blank" rel="noreferrer" data-i18n-key={`docsLinks.${index}.link`}>
-            Open doc
+            {doc.link}
           </a>
         </p>
       </article>

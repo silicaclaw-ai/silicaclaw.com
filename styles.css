@@ -313,6 +313,13 @@ code {
   background: rgba(255, 255, 255, 0.03);
   color: var(--muted);
   font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.hero-release span:first-child {
+  color: var(--text);
+  border-color: rgba(122, 230, 193, 0.34);
+  background: rgba(122, 230, 193, 0.08);
 }
 
 .button {
@@ -445,7 +452,7 @@ body.is-language-transitioning [data-i18n-html-key] {
 }
 
 .docs-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .feature-card,
@@ -464,7 +471,7 @@ body.is-language-transitioning [data-i18n-html-key] {
 }
 
 .docs-grid .package-card {
-  min-height: 206px;
+  min-height: 198px;
 }
 
 .section-heading {
@@ -629,6 +636,7 @@ pre code {
   color: var(--accent);
   text-decoration: none;
   font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .doc-link-row a:hover,

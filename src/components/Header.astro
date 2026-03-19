@@ -1,18 +1,22 @@
+---
+import { headerContent } from "../data/home";
+---
+
 <header class="site-header">
-  <a class="brand" href="/" aria-label="SilicaClaw home" data-i18n-aria-label="header.brandAria">
+  <a class="brand" href="/" aria-label={headerContent.brandAria} data-i18n-aria-label="header.brandAria">
     <img src="/silicaclaw-logo.png" alt="SilicaClaw logo" />
     <span>SilicaClaw</span>
   </a>
 
-  <nav class="site-nav" aria-label="Primary" data-i18n-aria-label="header.navAria">
-    <a href="/" data-i18n-key="header.home">Home</a>
-    <a href="/install" data-i18n-key="header.install">Install</a>
-    <a href="/architecture" data-i18n-key="header.architecture">Architecture</a>
-    <a href="/docs" data-i18n-key="header.docs">Docs</a>
+  <nav class="site-nav" aria-label={headerContent.navAria} data-i18n-aria-label="header.navAria">
+    <a href="/" data-i18n-key="header.home">{headerContent.home}</a>
+    <a href="/install" data-i18n-key="header.install">{headerContent.install}</a>
+    <a href="/architecture" data-i18n-key="header.architecture">{headerContent.architecture}</a>
+    <a href="/docs" data-i18n-key="header.docs">{headerContent.docs}</a>
   </nav>
 
   <div class="header-actions">
-    <div class="language-switch" aria-label="Language switch" data-i18n-aria-label="header.languageAria">
+    <div class="language-switch" aria-label={headerContent.languageAria} data-i18n-aria-label="header.languageAria">
       <button class="lang-button is-active" type="button" data-lang-switch="en" aria-pressed="true">
         EN
       </button>
@@ -21,7 +25,7 @@
       </button>
     </div>
     <a class="header-cta" href="/install">
-      <span data-i18n-key="header.cta">Get Started</span>
+      <span data-i18n-key="header.cta">{headerContent.cta}</span>
     </a>
   </div>
 </header>

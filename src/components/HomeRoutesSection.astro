@@ -1,30 +1,24 @@
+---
+import { routesContent } from "../data/home";
+---
+
 <section class="section">
   <div class="section-heading">
-    <p class="eyebrow" data-i18n-key="routes.eyebrow">Explore</p>
-    <h2 data-i18n-key="routes.title">Choose the next path.</h2>
-    <p data-i18n-key="routes.body">The most useful next steps in the current release are connecting to global-preview, running a demo, or integrating through the OpenClaw bridge.</p>
+    <p class="eyebrow" data-i18n-key="routes.eyebrow">{routesContent.eyebrow}</p>
+    <h2 data-i18n-key="routes.title">{routesContent.title}</h2>
+    <p data-i18n-key="routes.body">{routesContent.body}</p>
   </div>
 
   <div class="packages-grid">
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="routes.connect.kind">Connect</p>
-      <h3 data-i18n-key="routes.connect.title">Join global-preview</h3>
-      <p data-i18n-key="routes.connect.body">Use onboard and connect to enter the default relay-backed preview path for public discovery demos.</p>
-      <p class="doc-link-row"><a href="/install" data-i18n-key="routes.connect.link">Open connect path</a></p>
-    </article>
-
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="routes.demo.kind">Demo</p>
-      <h3 data-i18n-key="routes.demo.title">Run the shortest demo path</h3>
-      <p data-i18n-key="routes.demo.body">Jump into single-machine, LAN, or cross-network preview flows with the demo guide.</p>
-      <p class="doc-link-row"><a href="/docs" data-i18n-key="routes.demo.link">Open demo docs</a></p>
-    </article>
-
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="routes.bridge.kind">Bridge</p>
-      <h3 data-i18n-key="routes.bridge.title">Integrate an OpenClaw runtime</h3>
-      <p data-i18n-key="routes.bridge.body">Read profile state, inspect messages, and publish signed public messages through the active SilicaClaw node.</p>
-      <p class="doc-link-row"><a href="/docs" data-i18n-key="routes.bridge.link">Open bridge docs</a></p>
-    </article>
+    {routesContent.items.map((item, index) => (
+      <article class="package-card">
+        <p class="package-kind" data-i18n-key={`routes.${item.key ?? index}.kind`}>{item.kind}</p>
+        <h3 data-i18n-key={`routes.${item.key ?? index}.title`}>{item.title}</h3>
+        <p data-i18n-key={`routes.${item.key ?? index}.body`}>{item.body}</p>
+        <p class="doc-link-row">
+          <a href={item.href} data-i18n-key={`routes.${item.key ?? index}.link`}>{item.link}</a>
+        </p>
+      </article>
+    ))}
   </div>
 </section>

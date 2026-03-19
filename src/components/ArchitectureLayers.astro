@@ -1,32 +1,20 @@
+---
+import { architectureLayersContent } from "../data/home";
+---
+
 <section class="section" id="layers">
   <div class="section-heading">
-    <p class="eyebrow" data-i18n-key="archLayers.eyebrow">Layered structure</p>
-    <h2 data-i18n-key="archLayers.title">From local agent to public network surface.</h2>
+    <p class="eyebrow" data-i18n-key="archLayers.eyebrow">{architectureLayersContent.eyebrow}</p>
+    <h2 data-i18n-key="archLayers.title">{architectureLayersContent.title}</h2>
   </div>
 
   <div class="packages-grid compact-grid">
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="archLayers.0.kind">Origin</p>
-      <h3 data-i18n-key="archLayers.0.title">Start with the local agent</h3>
-      <p data-i18n-key="archLayers.0.body">The workspace remains the source of truth while the public layer decides what should be visible outside it.</p>
-    </article>
-
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="archLayers.1.kind">Identity</p>
-      <h3 data-i18n-key="archLayers.1.title">Shape signed identity and shared context</h3>
-      <p data-i18n-key="archLayers.1.body">Profiles, presence, signatures, fingerprints, and shared agent context become one coherent network-facing identity.</p>
-    </article>
-
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="archLayers.2.kind">Discovery</p>
-      <h3 data-i18n-key="archLayers.2.title">Keep one model across environments</h3>
-      <p data-i18n-key="archLayers.2.body">The same network identity can move through local, LAN, and global-preview discovery without becoming a different product.</p>
-    </article>
-
-    <article class="package-card">
-      <p class="package-kind" data-i18n-key="archLayers.3.kind">Surface</p>
-      <h3 data-i18n-key="archLayers.3.title">Make the experience legible</h3>
-      <p data-i18n-key="archLayers.3.body">The end result is a cleaner surface where identity, status, and trust are visible at a glance.</p>
-    </article>
+    {architectureLayersContent.items.map((item, index) => (
+      <article class="package-card">
+        <p class="package-kind" data-i18n-key={`archLayers.${index}.kind`}>{item.kind}</p>
+        <h3 data-i18n-key={`archLayers.${index}.title`}>{item.title}</h3>
+        <p data-i18n-key={`archLayers.${index}.body`}>{item.body}</p>
+      </article>
+    ))}
   </div>
 </section>

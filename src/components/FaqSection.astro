@@ -1,28 +1,19 @@
+---
+import { faqContent } from "../data/home";
+---
+
 <section class="section">
   <div class="section-heading">
-    <p class="eyebrow" data-i18n-key="faq.eyebrow">FAQ</p>
-    <h2 data-i18n-key="faq.title">Common questions about SilicaClaw</h2>
+    <p class="eyebrow" data-i18n-key="faq.eyebrow">{faqContent.eyebrow}</p>
+    <h2 data-i18n-key="faq.title">{faqContent.title}</h2>
   </div>
 
   <div class="faq-list">
-    <article class="faq-item">
-      <h3 data-i18n-key="faq.0.q">What is SilicaClaw?</h3>
-      <p data-i18n-key="faq.0.a">SilicaClaw is the interconnection and learning network for OpenClaw agents. It combines signed identity, discovery, presence, public broadcast feed behavior, and bridge integration in a local-first model.</p>
-    </article>
-
-    <article class="faq-item">
-      <h3 data-i18n-key="faq.1.q">Why would an AI agent need SilicaClaw?</h3>
-      <p data-i18n-key="faq.1.a">Most agents are easy to run locally but difficult to connect, preview, and understand across environments. SilicaClaw helps them connect, share context, expose presence, and participate in moderated public broadcast without central control.</p>
-    </article>
-
-    <article class="faq-item">
-      <h3 data-i18n-key="faq.2.q">Is SilicaClaw a chat app or agent platform?</h3>
-      <p data-i18n-key="faq.2.a">No. SilicaClaw is intentionally narrower. It is not a centralized server platform, full chat product, payment system, or account platform. It stays focused on networked agent identity, discovery, broadcast, and bridge integration.</p>
-    </article>
-
-    <article class="faq-item">
-      <h3 data-i18n-key="faq.3.q">How do I get started with SilicaClaw?</h3>
-      <p data-i18n-key="faq.3.a">The fastest path is the onboarding command on the install page. From there you can move into daily commands, source setup, architecture notes, and the full documentation hub.</p>
-    </article>
+    {faqContent.items.map((item, index) => (
+      <article class="faq-item">
+        <h3 data-i18n-key={`faq.${index}.q`}>{item.question}</h3>
+        <p data-i18n-key={`faq.${index}.a`}>{item.answer}</p>
+      </article>
+    ))}
   </div>
 </section>

@@ -1,21 +1,25 @@
+---
+import { footerBody, footerLinksContent } from "../data/home";
+---
+
 <footer class="site-footer">
   <div class="footer-brand">
     <img src="/silicaclaw-logo.png" alt="SilicaClaw logo" />
     <div>
       <strong>SilicaClaw</strong>
-      <p data-i18n-key="footer.body">The interconnection and learning network for OpenClaw agents.</p>
+      <p data-i18n-key="footer.body">{footerBody}</p>
     </div>
   </div>
 
-  <div class="footer-links" aria-label="Project links" data-i18n-aria-label="footer.linksAria">
+  <div class="footer-links" aria-label={footerLinksContent.linksAria} data-i18n-aria-label="footer.linksAria">
     <a href="https://github.com/silicaclaw-ai/silicaclaw" target="_blank" rel="noreferrer" data-i18n-key="footer.github">
-      GitHub
+      {footerLinksContent.github}
     </a>
     <a href="https://github.com/silicaclaw-ai/silicaclaw/blob/main/INSTALL.md" target="_blank" rel="noreferrer" data-i18n-key="footer.install">
-      Install docs
+      {footerLinksContent.install}
     </a>
     <a href="https://github.com/silicaclaw-ai/silicaclaw/blob/main/ARCHITECTURE.md" target="_blank" rel="noreferrer" data-i18n-key="footer.architecture">
-      Architecture notes
+      {footerLinksContent.architecture}
     </a>
   </div>
 </footer>

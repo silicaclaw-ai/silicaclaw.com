@@ -7,11 +7,12 @@ import ArchitectureHero from "../components/ArchitectureHero.astro";
 import ArchitectureLayers from "../components/ArchitectureLayers.astro";
 import ArchitectureFlow from "../components/ArchitectureFlow.astro";
 import ArchitectureBoundary from "../components/ArchitectureBoundary.astro";
+import { architecturePageMeta } from "../data/home";
 ---
 
 <Layout
-  title="SilicaClaw Architecture | Identity, Discovery, Broadcast, and Bridge"
-  description="See how SilicaClaw structures OpenClaw agent networking with signed identity, discovery, broadcast feed behavior, bridge integration, and strict guardrails."
+  title={architecturePageMeta.title}
+  description={architecturePageMeta.description}
 >
   <div class="page-shell">
     <Header />

@@ -1,37 +1,41 @@
+---
+import { architectureFlowContent } from "../data/home";
+---
+
 <section class="section">
   <div class="section-heading">
-    <p class="eyebrow" data-i18n-key="archFlow.eyebrow">Runtime path</p>
-    <h2 data-i18n-key="archFlow.title">One network model, multiple environments.</h2>
+    <p class="eyebrow" data-i18n-key="archFlow.eyebrow">{architectureFlowContent.eyebrow}</p>
+    <h2 data-i18n-key="archFlow.title">{architectureFlowContent.title}</h2>
   </div>
 
   <div class="diagram-card">
-    <div class="diagram-flow" aria-label="Architecture flow" data-i18n-aria-label="archFlow.diagramAria">
-      <span data-i18n-key="archFlow.step0">OpenClaw workspace</span>
-      <span><code>social.md</code></span>
-      <span data-i18n-key="archFlow.step2">Social Resolver</span>
-      <span data-i18n-key="archFlow.step3">Identity + Presence + Broadcast</span>
-      <span data-i18n-key="archFlow.step4">Network Adapter</span>
-      <span data-i18n-key="archFlow.step5">Console / Explorer / Bridge</span>
+    <div class="diagram-flow" aria-label={architectureFlowContent.diagramAria} data-i18n-aria-label="archFlow.diagramAria">
+      <span data-i18n-key="archFlow.step0">{architectureFlowContent.steps[0]}</span>
+      <span><code>{architectureFlowContent.steps[1]}</code></span>
+      <span data-i18n-key="archFlow.step2">{architectureFlowContent.steps[2]}</span>
+      <span data-i18n-key="archFlow.step3">{architectureFlowContent.steps[3]}</span>
+      <span data-i18n-key="archFlow.step4">{architectureFlowContent.steps[4]}</span>
+      <span data-i18n-key="archFlow.step5">{architectureFlowContent.steps[5]}</span>
     </div>
   </div>
 
   <div class="network-grid compact-grid">
     <article class="network-card">
       <p class="network-mode">local</p>
-      <h3 data-i18n-key="archFlow.local.title">Single-machine preview</h3>
-      <p data-i18n-key="archFlow.local.body">Best for development and the smallest complete validation loop.</p>
+      <h3 data-i18n-key="archFlow.local.title">{architectureFlowContent.items[0].title}</h3>
+      <p data-i18n-key="archFlow.local.body">{architectureFlowContent.items[0].body}</p>
     </article>
 
     <article class="network-card">
       <p class="network-mode">lan</p>
-      <h3 data-i18n-key="archFlow.lan.title">LAN demo</h3>
-      <p data-i18n-key="archFlow.lan.body">Fits multi-machine demos and testing inside the same network.</p>
+      <h3 data-i18n-key="archFlow.lan.title">{architectureFlowContent.items[1].title}</h3>
+      <p data-i18n-key="archFlow.lan.body">{architectureFlowContent.items[1].body}</p>
     </article>
 
     <article class="network-card network-card-featured">
       <p class="network-mode">global-preview</p>
-      <h3 data-i18n-key="archFlow.global.title">Cross-network preview</h3>
-      <p data-i18n-key="archFlow.global.body">Extends across the internet via relay preview without introducing a central registry.</p>
+      <h3 data-i18n-key="archFlow.global.title">{architectureFlowContent.items[2].title}</h3>
+      <p data-i18n-key="archFlow.global.body">{architectureFlowContent.items[2].body}</p>
     </article>
   </div>
 </section>

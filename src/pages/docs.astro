@@ -6,11 +6,12 @@ import HomePageScript from "../components/HomePageScript.astro";
 import DocsHero from "../components/DocsHero.astro";
 import DocsLinksSection from "../components/DocsLinksSection.astro";
 import DocsPathSection from "../components/DocsPathSection.astro";
+import { docsPageMeta } from "../data/home";
 ---
 
 <Layout
-  title="SilicaClaw Docs | Install, Architecture, and Quick Start"
-  description="Browse the SilicaClaw documentation hub for install guides, quick start paths, architecture notes, and integration references."
+  title={docsPageMeta.title}
+  description={docsPageMeta.description}
 >
   <div class="page-shell">
     <Header />

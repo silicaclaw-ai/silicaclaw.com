@@ -1,25 +1,26 @@
+---
+import { installHeroContent, sharedContent } from "../data/home";
+---
+
 <section class="install-hero">
   <div class="install-hero-copy">
-    <p class="eyebrow" data-i18n-key="installHero.eyebrow">Install guide</p>
-    <h1 data-i18n-key="installHero.title">Install, connect, and choose your network path.</h1>
-    <p class="hero-text" data-i18n-key="installHero.body">
-      Start with onboard, move into the connect wizard for global-preview, then install
-      the persistent service or run from source when you need deeper control.
-    </p>
+    <p class="eyebrow" data-i18n-key="installHero.eyebrow">{installHeroContent.eyebrow}</p>
+    <h1 data-i18n-key="installHero.title">{installHeroContent.title}</h1>
+    <p class="hero-text" data-i18n-key="installHero.body">{installHeroContent.body}</p>
 
     <div class="hero-actions">
       <a class="button button-primary" href="#install-methods">
-        <span data-i18n-key="installHero.primaryCta">See install paths</span>
+        <span data-i18n-key="installHero.primaryCta">{installHeroContent.primaryCta}</span>
       </a>
       <a class="button button-secondary" href="/">
-        <span data-i18n-key="shared.backHome">Back to home</span>
+        <span data-i18n-key="shared.backHome">{sharedContent.backHome}</span>
       </a>
     </div>
   </div>
 
   <div class="install-hero-card">
-    <p class="panel-label" data-i18n-key="installHero.panelLabel">Recommended</p>
-    <h2 data-i18n-key="installHero.panelTitle">Onboard first, connect when ready</h2>
-    <pre><code>npx -y @silicaclaw/cli@beta onboard</code></pre>
+    <p class="panel-label" data-i18n-key="installHero.panelLabel">{installHeroContent.panelLabel}</p>
+    <h2 data-i18n-key="installHero.panelTitle">{installHeroContent.panelTitle}</h2>
+    <pre><code>{installHeroContent.code}</code></pre>
   </div>
 </section>
