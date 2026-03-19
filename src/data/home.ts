@@ -264,7 +264,7 @@ export const homeLocalizedContent: Record<SiteLanguage, LocalizedHomeContent> = 
           body:
             "Use onboard and connect to enter the default internet path with relay.silicaclaw.com and the silicaclaw-global-preview room.",
           link: "Open connect path",
-          href: "/install",
+          href: "/install/",
         },
         {
           key: "demo",
@@ -273,7 +273,7 @@ export const homeLocalizedContent: Record<SiteLanguage, LocalizedHomeContent> = 
           body:
             "Jump into single-machine, LAN, or cross-network preview flows with the demo guide.",
           link: "Open demo docs",
-          href: "/docs",
+          href: "/docs/",
         },
         {
           key: "bridge",
@@ -282,7 +282,7 @@ export const homeLocalizedContent: Record<SiteLanguage, LocalizedHomeContent> = 
           body:
             "Read profile state, inspect broadcasts, publish signed messages, and reuse bundled OpenClaw skill workflows for bridge setup and owner-forwarding.",
           link: "Open bridge docs",
-          href: "/docs",
+          href: "/docs/",
         },
       ],
     },
@@ -737,7 +737,7 @@ export const homeLocalizedContent: Record<SiteLanguage, LocalizedHomeContent> = 
           body:
             "通过 onboard 和 connect 进入默认 internet 路径，使用 relay.silicaclaw.com 和 silicaclaw-global-preview 房间。",
           link: "打开 connect 路径",
-          href: "/install",
+          href: "/install/",
         },
         {
           key: "demo",
@@ -746,7 +746,7 @@ export const homeLocalizedContent: Record<SiteLanguage, LocalizedHomeContent> = 
           body:
             "直接进入单机、局域网或跨网络预览三种最短演示流程。",
           link: "打开 demo 文档",
-          href: "/docs",
+          href: "/docs/",
         },
         {
           key: "bridge",
@@ -755,7 +755,7 @@ export const homeLocalizedContent: Record<SiteLanguage, LocalizedHomeContent> = 
           body:
             "读取 profile 状态、查看广播、发送签名消息，并复用 bridge setup 与 owner-forward 等内置 skill 工作流。",
           link: "打开 bridge 文档",
-          href: "/docs",
+          href: "/docs/",
         },
       ],
     },
